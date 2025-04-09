@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="brand">
+                    <img src="./assets/app_logo.png" alt="Brand Logo">
+                    Spotify
+                </li>
+                <li>Home</li>
+                <li>About</li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- song container  -->
+        <div class="container">
+            <h1>List of Songs</h1>
+            <div class="box">
+                <div class="song_list col">
+                    <!-- song items -->
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/0.png" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Mortals</span>
+                        <!-- song duration -->
+                        <span>2:37</span>
+                        <!-- song play button -->
+                        <span><i id="0" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/1.jpg" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Heroes Tonight</span>
+                        <!-- song duration -->
+                        <span>3:01</span>
+                        <!-- song play button -->
+                        <span><i id="1" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/2.jpg" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Why We Lose</span>
+                        <!-- song duration -->
+                        <span>3:22</span>
+                        <!-- song play button -->
+                        <span><i id="2" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/3.jpg" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Light It Up</span>
+                        <!-- song duration -->
+                        <span>2:35</span>
+                        <!-- song play button -->
+                        <span><i id="3" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/4.jpg" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Entropy</span>
+                        <!-- song duration -->
+                        <span>1:13</span>
+                        <!-- song play button -->
+                        <span><i id="4" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+
+                    <!-- song items -->
+                    <div class="songItem">
+                        <!-- song cover -->
+                        <img src="/assets/covers/5.png" alt="cover_1">
+                        <!-- song Title -->
+                        <span class="songTitle">Royalty</span>
+                        <!-- song duration -->
+                        <span>3:23</span>
+                        <!-- song play button -->
+                        <span><i id="5" class="fa-solid fa-circle-play songPlayBtn_onList"></i></span>
+                    </div>
+                </div>
+                <div class="curr_song_banner col">
+                    <img id="currSongCoverImageId" src="/assets/cover_mortals.jpg" alt="cover_1">
+                </div>
+            </div>
+        </div>
+
+        <!-- song player -->
+        <div class="bottom">
+            <div class="song_progress">
+                <span class="song_time" id="songPlayedTimeId">0:0 (played time)</span>
+                <input type="range" min="0" max="100" value="0" id="songProgressBar">
+                <span class="song_time" id="songDurationTimeId">0:0 (total duration)</span>
+            </div>
+
+            <div class="songInfo_and_songControls">
+                <!-- current song info -->
+                <div class="curr_song_info">
+                    <!-- gif -->
+                    <img src="/assets/GIF_musci_playing.gif" alt="song playing gif" id="songPlayerGifId">
+                    <!-- title -->
+                    <span id="masterSongTitleId">Mortals vibe</span>
+                </div>
+                <!-- control buttons -->
+                <div class="control_buttons">
+
+                    <!-- font awesome icons -->
+                    <!-- previous -->
+                    <span><i class="fa-solid fa-backward-step" id="previousTractBtnId"></i></span>
+                    <!-- play -->
+                    <span><i class="fa-solid fa-circle-play" id="masterPlayBtnId"></i></span>
+                    <!-- next -->
+                    <span><i class="fa-solid fa-forward-step" id="nextTractBtnId"></i></span>
+                </div>
+
+                <div class="div">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
